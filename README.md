@@ -1,4 +1,4 @@
-# OATD Thesis Crawler 🎓
+# OATD Thesis Crawler
 
 批量采集 [OATD](https://oatd.org/)（Open Access Theses and Dissertations）上公开论文的元数据，并尽可能解析公开可访问的 PDF 直链与下载样例文件。
 
@@ -12,10 +12,10 @@
 
 | 传统方案 (Playwright) | 本项目方案 (opencli + Chrome) |
 |---|---|
-| 需要处理 Cloudflare 检测 | 用户 Chrome 自然通过 ✅ |
-| 需要 playwright-stealth 等反检测 | 无需任何反检测 ✅ |
-| 需要管理浏览器进程生命周期 | Chrome 独立运行，永不崩溃 ✅ |
-| 依赖重 (~300MB) | 仅需 opencli CLI ✅ |
+| 需要处理 Cloudflare 检测 | 用户 Chrome 自然通过 |
+| 需要 playwright-stealth 等反检测 | 无需任何反检测 |
+| 需要管理浏览器进程生命周期 | Chrome 独立运行，永不崩溃 |
+| 依赖重 (~300MB) | 仅需 opencli CLI |
 
 ### 数据流
 
