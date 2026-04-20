@@ -1,0 +1,36 @@
+# OATD Thesis Crawler Configuration
+# ===================================
+
+# Search settings
+search:
+  # Search query
+  query: "analysis"
+  # Maximum number of papers to collect
+  max_papers: 5500
+  # Results per page (OATD fixed at 30)
+  page_size: 30
+  # Sort order: "relevance" or "date"
+  sort: "date"
+
+# Request pacing
+pacing:
+  # Delay between page navigations (seconds) [min, max]
+  delay_range: [2.0, 4.0]
+  # Max retries per page
+  max_retries: 3
+
+# PDF download
+pdf:
+  enabled: true
+  concurrency: 5
+  timeout: 60
+  max_size_mb: 100
+  # Limit the total number of PDFs to download (useful for samples)
+  max_downloads: 200
+
+# Output paths
+output:
+  metadata_dir: "data/metadata"
+  pdf_dir: "data/pdfs"
+  log_dir: "logs"
+  checkpoint_file: "data/checkpoint.json"
