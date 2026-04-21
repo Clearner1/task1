@@ -73,9 +73,6 @@ python -m src.main --crawl-only
 # 仅下载 PDF 样例（需要先有元数据）
 python -m src.main --pdf-only
 
-# 为已有元数据补全 pdf_url 字段（不下载 PDF 文件）
-python -m src.backfill_pdf_urls
-
 # 查看当前进度
 python -m src.main --stats
 
@@ -175,7 +172,6 @@ pdf:
 - **控制台**: Rich 格式化输出，实时显示进度
 - **日志文件**: `logs/crawler_YYYY-MM-DD.log`，自动轮转
 - **进度查看**: `python -m src.main --stats`
-- **PDF URL 回填**: `python -m src.backfill_pdf_urls`
 
 ## 项目结构
 
@@ -201,8 +197,7 @@ task1/
 │   ├── metadata/            # 输出: JSONL + CSV
 │   ├── pdfs/                # 输出: PDF 文件
 │   └── checkpoint.json      # 进度存档
-├── logs/                    # 日志
-└── src/backfill_pdf_urls.py # 回填 pdf_url
+└── logs/                    # 日志
 ```
 
 ## 异常处理
